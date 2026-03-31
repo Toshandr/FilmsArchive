@@ -1,0 +1,45 @@
+{
+  "version": 2,
+  "dgSpecHash": "wI5SjVqPirA=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Anton\\Desktop\\FilmsArchive\\FilmsArchive.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Anton\\.nuget\\packages\\dotnetenv\\3.1.1\\dotnetenv.3.1.1.nupkg.sha512",
+    "C:\\Users\\Anton\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\Anton\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.35\\microsoft.entityframeworkcore.6.0.35.nupkg.sha512",
+    "C:\\Users\\Anton\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.35\\microsoft.entityframeworkcore.abstractions.6.0.35.nupkg.sha512",
+    "C:\\Users\\Anton\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.35\\microsoft.entityframeworkcore.analyzers.6.0.35.nupkg.sha512",
+    "C:\\Users\\Anton\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.35\\microsoft.entityframeworkcore.design.6.0.35.nupkg.sha512",
+    "C:\\Users\\Anton\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.35\\microsoft.entityframeworkcore.relational.6.0.35.nupkg.sha512",
+    "C:\\Users\\Anton\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.35\\microsoft.entityframeworkcore.tools.6.0.35.nupkg.sha512",
+    "C:\\Users\\Anton\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\Anton\\.nuget\\packages\\microsoft.extensions.caching.stackexchangeredis\\6.0.35\\microsoft.extensions.caching.stackexchangeredis.6.0.35.nupkg.sha512",
+    "C:\\Users\\Anton\\.nuget\\packages\\microsoft.extensions.configuration.json\\10.0.5\\microsoft.extensions.configuration.json.10.0.5.nupkg.sha512",
+    "C:\\Users\\Anton\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Anton\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Anton\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
+    "C:\\Users\\Anton\\.nuget\\packages\\npgsql\\6.0.11\\npgsql.6.0.11.nupkg.sha512",
+    "C:\\Users\\Anton\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\6.0.29\\npgsql.entityframeworkcore.postgresql.6.0.29.nupkg.sha512",
+    "C:\\Users\\Anton\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+    "C:\\Users\\Anton\\.nuget\\packages\\sprache\\2.3.1\\sprache.2.3.1.nupkg.sha512",
+    "C:\\Users\\Anton\\.nuget\\packages\\stackexchange.redis\\2.6.122\\stackexchange.redis.2.6.122.nupkg.sha512",
+    "C:\\Users\\Anton\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\Anton\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\Anton\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\Anton\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1510",
+      "level": "Warning",
+      "message": "PackageReference Microsoft.Extensions.Configuration.Json will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.",
+      "projectPath": "C:\\Users\\Anton\\Desktop\\FilmsArchive\\FilmsArchive.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Anton\\Desktop\\FilmsArchive\\FilmsArchive.csproj",
+      "libraryId": "Microsoft.Extensions.Configuration.Json",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
+}

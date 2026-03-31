@@ -1,0 +1,6 @@
+@FilmsArchive_HostAddress = http://localhost:5192
+
+GET {{FilmsArchive_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
