@@ -1,0 +1,154 @@
+﻿КОД. Backend. 2 курс. День 01
+🧩 Задание 1. «Умный архиватор логов»
+Общие сведения:
+Технологии: ASP.NET Core Web API, EF Core (SQLite/PostgreSQL), Отношения many-to-many.
+
+
+Легенда:
+Киносайту нужен простой API для управления каталогом фильмов и актёров. У каждого фильма может быть несколько актёров, у каждого актёра — несколько фильмов. Нужно реализовать создание и просмотр сущностей с правильной связью многие-ко-многим.
+
+
+Требования:
+1. База данных:
+Использовать SQLite или PostgreSQL.
+Три таблицы: Movies, Actors, MovieActors (промежуточная).
+Применить миграции при старте приложения (context.Database.Migrate()).
+
+
+2. API Контроллеры:
+1. GET /api/movies — Список всех фильмов
+
+
+Ответ: 200 OK:
+[
+ {
+   "id": 1,
+   "title": "The Dark Knight",
+   "year": 2008,
+   "genre": "Action",
+   "actors": [
+     { "id": 10, "name": "Christian Bale" },
+     { "id": 11, "name": "Heath Ledger" }
+   ]
+ },
+ {
+   "id": 2,
+   "title": "Inception",
+   "year": 2010,
+   "genre": "Sci-Fi",
+   "actors": [
+     { "id": 10, "name": "Christian Bale" },
+     { "id": 12, "name": "Leonardo DiCaprio" }
+   ]
+ }
+]
+	
+
+2. POST /api/movies — Создать фильм
+
+
+Тело запроса:
+{
+ "title": "Новый фильм",
+ "year": 2024,
+ "genre": "Drama",
+ "description": "Описание фильма",
+ "actors": [
+   { "actorId": 1, "role": "Главная роль" },
+   { "actorId": 5, "role": "Второстепенная роль" }
+ ]
+}
+	
+
+* title: 1-100 символов (обязательно).
+* year: 1900–2030.
+* actors: список актёров (опционально, может быть пустым).
+
+
+Если актёр с actorId не найден → 400 Bad Request.
+Ответ: 201 Created + созданный фильм с актёрами.
+
+
+3. GET /api/actors — Список всех актёров
+
+
+Ответ: 200 OK
+[
+ {
+   "id": 1,
+   "name": "Leonardo DiCaprio",
+   "birthYear": 1974,
+   "moviesCount": 2
+ },
+ {
+   "id": 2,
+   "name": "Brad Pitt",
+   "birthYear": 1963,
+   "moviesCount": 0
+ }
+]
+	________________
+
+
+4. POST /api/actors — Создать актёра
+
+
+Тело запроса:
+{
+ "name": "Имя Фамилия",
+ "birthYear": 1990
+}
+	
+
+* name: 1-100 символов (обязательно).
+* birthYear: 1900–2010.
+Ответ: 201 Created + созданный актёр.
+
+
+3. Модели данных:
+
+
+Таблица Movies:
+public class Movie {
+   public int Id { get; set; }
+   public string Title { get; set; }
+   public int Year { get; set; }
+   public string Genre { get; set; }
+   public string Description { get; set; }
+   public List<MovieActor> MovieActors { get; set; }
+}
+	
+
+Таблица Actors:
+public class Actor {
+   public int Id { get; set; }
+   public string Name { get; set; }
+   public int BirthYear { get; set; }
+   public List<MovieActor> MovieActors { get; set; }
+}
+	
+
+Таблица MovieActors (промежуточная):
+public class MovieActor {
+   public int MovieId { get; set; }
+   public Movie Movie { get; set; }
+   public int ActorId { get; set; }
+   public Actor Actor { get; set; }
+   public string Role { get; set; }
+}
+	
+
+Проверка работы (чек-лист для участника):
+* Создание актёра работает
+* Создание фильма с актёрами создаёт связи в MovieActors
+* Нельзя создать фильм с несуществующим actorId → 400
+
+
+Сдача работы:
+Работа сдается в виде ссылки на публичный GitHub-репозиторий. 
+Форма для отправки задания:
+https://forms.gle/sXZzcyBybrgEjjha9  
+
+
+Это задание необходимо сдать до 7:59 среды, 01.04.26 (по московскому времени)
+Если вы решили изменить сданный ранее ответ, то нужно отправить форму повторно, но сделать это можно всего лишь один раз.

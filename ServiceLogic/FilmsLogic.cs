@@ -87,7 +87,7 @@ namespace MovieAPI.Services
                 .LoadAsync();
 
             // Очищаем кеш
-            if (_cache != null)
+            if (_cache != null) //без очистки при добавлении нового фильма, список фильмов в кеше будет устаревшим. Также так как при добавлении фильма может измениться количество фильмов у актера, то и список актеров в кеше будет устаревшим
             {
                 await _cache.DeleteAsync("movies:all");
                 await _cache.DeleteAsync("actors:all");

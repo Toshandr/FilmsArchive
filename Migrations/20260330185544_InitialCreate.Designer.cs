@@ -8,7 +8,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace FilmsArchive.Migrations
+namespace FilmsArchive.Migrations 
 {
     [DbContext(typeof(postgresContext))]
     [Migration("20260330185544_InitialCreate")]

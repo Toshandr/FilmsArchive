@@ -58,7 +58,7 @@ namespace MovieAPI.Services
             _context.Actors.Add(actor);
             await _context.SaveChangesAsync();
 
-            // Очищаем кеш
+            // Очищаем кеш. Без очистки при добавлении нового актера, список актеров в кеше будет устаревшим
             if (_cache != null)
             {
                 await _cache.DeleteAsync("actors:all");

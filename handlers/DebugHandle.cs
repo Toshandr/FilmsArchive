@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MovieAPI.Cache;
 
-[ApiController]
+[ApiController]  //Этjn запрос я делал для проверки подключения к Redis
 [Route("api/[controller]")]
 public class DebugController : ControllerBase
 {
@@ -17,26 +17,8 @@ public class DebugController : ControllerBase
     {
         if (_cache == null)
         {
-            return Ok(new { status = "Redis not connected" });
+            return BadRequest(new { status = "Redis not connected" });
         }
         return Ok(new { status = "Redis connected" });
-    }
-
-    [HttpPost("test-redis")]
-    public async Task<IActionResult> TestRedis()
-    {
-        if (_cache == null)
-        {
-            return Ok(new { error = "Redis not available" });
-        }
-
-        await _cache.SetAsync("test:key", "test value", TimeSpan.FromMinutes(1));
-        var value = await _cache.GetAsync<string>("test:key");
-        
-        return Ok(new { 
-            written = "test value",
-            read = value,
-            success = value == "test value"
-        });
     }
 }

@@ -20,7 +20,7 @@ namespace MovieAPI.Logging
 
         public static void LogError(string message, Exception? ex = null)
         {
-            lock (_lock)
+            lock (_lock) //Тут я ограничил доступ к файлу, чтобы избежать проблем при одновременной записи из разных потоков
             {
                 try
                 {

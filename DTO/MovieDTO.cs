@@ -1,4 +1,4 @@
-public class MovieDto
+public class MovieDto//Data Trancfer Object для выдачи инфы о фильме
 {
     public int Id { get; set; }
     public string Title { get; set; } = string.Empty;
@@ -7,7 +7,7 @@ public class MovieDto
     public List<ActorInMovieDto> Actors { get; set; } = new();
 }
 
-public class ActorInMovieDto
+public class ActorInMovieDto //Data Transfer Object для списка актёров в фильме
 {
     public int Id { get; set; }
     public string Name { get; set; } = string.Empty;

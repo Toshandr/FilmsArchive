@@ -3,7 +3,7 @@ using System.Text;
 using System.Text.Json;
 using MovieAPI.Logging;
 
-namespace MovieAPI.Middleware
+namespace MovieAPI.Middleware //тут я отлавливаю ошибки
 {
     public class ErrorHandlingMiddleware
     {

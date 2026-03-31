@@ -5,7 +5,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace FilmsArchive.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class InitialCreate : Migration  //регистрировать миграцию только в том случае если потеряли бд на хостинге
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

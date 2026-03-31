@@ -1,6 +1,6 @@
 using StackExchange.Redis;
 using DotNetEnv;
-
+// код из инстуркции ReidisCloud для подключения к Redis хранилищу
 public class ConnectBasicExample
 {
     public void run()

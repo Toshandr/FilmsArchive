@@ -1,5 +1,5 @@
 version: '3.8'
-
+#чутка шарю в этой теме
 services:
   redis:
     image: redis:alpine
@@ -9,7 +9,7 @@ services:
   api:
     build: .
     ports:
-      - "5192:8080"
+      - "5192:8080" #порт локальный:контейнера
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:8080
